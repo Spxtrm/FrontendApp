@@ -1,0 +1,203 @@
+<div class="main-body alrt-main-body" id="main-body">
+  <div class="left-section alrt-section">
+    <div class="table-section-header">
+      <!-- including page tab-bar -->
+      <app-pagebar></app-pagebar>
+      <div id="test-swipe-2" class="col s12 alert-tab-section">
+        <div class="alrt-tab-head">
+          <h4>ALERTS</h4>
+          <input type="text" class="alrt-input" placeholder="Filter by Keyword" id="">
+        </div>
+        <div class="alrt-tab-body table-responsive-vertical">
+          <table id="table" class="table table-hover responsive-table table-mc-light-blue">
+            <thead>
+              <tr class="brdr-style">
+                <th>#</th>
+                <th>ALERT TYPE</th>
+                <th>ALERT TIME</th>
+                <th>ROOM</th>
+                <th>CAMERA</th>
+                <th>ROOM DESCRIPTION</th>
+                <th>ACTION</th>
+              </tr>
+            </thead>
+            <tbody class="alrt-tbody">
+              <tr>
+                <td data-title="#">01</td>
+                <td data-title="ALERT TYPE" class="td-dot-position"><span class="red-dot"></span>Fall</td>
+                <td data-title="ALERT TIME">10:00pm | 27 Jul</td>
+                <td data-title="ROOM">D104</td>
+                <td data-title="CAMERA">#C-1233</td>
+                <td data-title="ROOM DESCRIPTION">Room is located in the D wing.</td>
+                <td data-title="ACTION">
+      
+                    <mat-form-field class='dropdown-trigger white-btn-border' >
+                        <mat-select  placeholder="Take Action">
+                          <mat-option  *ngFor="let action of action" (click)="openDialog()">
+                            {{action.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td data-title="#">01</td>
+                <td data-title="ALERT TYPE" class="td-dot-position"><span class="yellow-dot"></span>Washroom</td>
+                <td data-title="ALERT TIME">10:00pm | 27 Jul</td>
+                <td data-title="ROOM">D104</td>
+                <td data-title="CAMERA">#C-1233</td>
+                <td data-title="ROOM DESCRIPTION">Room is located in the D wing.</td>
+                <td data-title="ACTION">
+                    
+                    <mat-form-field class='dropdown-trigger white-btn-border' >
+                        <mat-select  placeholder="Take Action">
+                          <mat-option  *ngFor="let action of action" (click)="openDialog()">
+                            {{action.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td data-title="#">01</td>
+                <td data-title="ALERT TYPE" class="td-dot-position"><span class="red-dot"></span>Fall</td>
+                <td data-title="ALERT TIME">10:00pm | 27 Jul</td>
+                <td data-title="ROOM">D104</td>
+                <td data-title="CAMERA">#C-1233</td>
+                <td data-title="ROOM DESCRIPTION">Room is located in the D wing.</td>
+                <td data-title="ACTION">
+                    <mat-form-field class='dropdown-trigger white-btn-border' >
+                        <mat-select  placeholder="Take Action">
+                          <mat-option  *ngFor="let action of action" (click)="openDialog()">
+                            {{action.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td data-title="#">01</td>
+                <td data-title="ALERT TYPE" class="td-dot-position"><span class="red-dot"></span>Aggression</td>
+                <td data-title="ALERT TIME">10:00pm | 27 Jul</td>
+                <td data-title="ROOM">D104</td>
+                <td data-title="CAMERA">#C-1233</td>
+                <td data-title="ROOM DESCRIPTION">Room is located in the D wing.</td>
+                <td data-title="ACTION">
+                    <mat-form-field class='dropdown-trigger white-btn-border' >
+                        <mat-select  placeholder="Take Action">
+                          <mat-option  *ngFor="let action of action" (click)="openDialog()">
+                            {{action.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td data-title="#">01</td>
+                <td data-title="ALERT TYPE" class="td-dot-position"><span class="yellow-dot"></span>Washroom</td>
+                <td data-title="ALERT TIME">10:00pm | 27 Jul</td>
+                <td data-title="ROOM">D104</td>
+                <td data-title="CAMERA">#C-1233</td>
+                <td data-title="ROOM DESCRIPTION">Room is located in the D wing.</td>
+                <td data-title="ACTION">
+                    <mat-form-field class='dropdown-trigger white-btn-border' >
+                        <mat-select  placeholder="Take Action">
+                          <mat-option  *ngFor="let action of action" (click)="openDialog()">
+                            {{action.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td data-title="#">01</td>
+                <td data-title="ALERT TYPE" class="td-dot-position"><span class="green-dot"></span>Poor Sleep</td>
+                <td data-title="ALERT TIME">10:00pm | 27 Jul</td>
+                <td data-title="ROOM">D104</td>
+                <td data-title="CAMERA">#C-1233</td>
+                <td data-title="ROOM DESCRIPTION">Room is located in the D wing.</td>
+                <td data-title="ACTION">
+                    <mat-form-field class='dropdown-trigger white-btn-border' >
+                        <mat-select  placeholder="Take Action">
+                          <mat-option  *ngFor="let action of action" (click)="openDialog()">
+                            {{action.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="alrt-tab-body">
+          <h4 class="table2-heading">CLOSED ALERTS</h4>
+          <table class="responsive-table highlight">
+            <tbody>
+              <tr>
+                <td>01</td>
+                 <td class="td-dot-position"><span class="yellow-dot"></span>Washroom</td>
+                <td>10:00pm | 27 Jul</td>
+                <td>D104</td>
+                <td>#C-1233</td>
+                <td>Room is located in the D wing.</td>
+                <td>Close</td>
+                <td class="css-tooltips"><a role="button" class="notes-icon tooltip" href="javascript:void(0)">
+                  <span class="tooltiptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</span></a>
+                </td>
+              </tr>
+              <tr>
+                <td>02</td>
+                 <td class="td-dot-position"><span class="green-dot"></span>Poor Sleep</td>
+                <td>10:00pm | 27 Jul</td>
+                <td>D104</td>
+                <td>#C-1233</td>
+                <td>Room is located in the D wing.</td>
+                <td>F-Positive</td>
+                <td class="css-tooltips"><a role="button" class="notes-icon tooltip" >
+                  <span class="tooltiptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</span></a>
+                </td>
+              </tr>
+              <tr>
+                <td>03</td>
+                 <td class="td-dot-position"><span class="red-dot"></span>Aggression</td>
+                <td>10:00pm | 27 Jul</td>
+                <td>D104</td>
+                <td>#C-1233</td>
+                <td>Room is located in the D wing.</td>
+                <td>Close</td>
+                <td class="css-tooltips"><a role="button" class="notes-icon tooltip">
+                  <span class="tooltiptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</span></a>
+                </td>
+              </tr>
+              <tr>
+                <td>04</td>
+                 <td class="td-dot-position"><span class="red-dot"></span>Fall</td>
+                <td>10:00pm | 27 Jul</td>
+                <td>D104</td>
+                <td>#C-1233</td>
+                <td>Room is located in the D wing.</td>
+                <td>F-Positive</td>
+                <td class="css-tooltips"><a role="button" class="notes-icon tooltip">
+                  <span class="tooltiptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</span></a>
+                </td>
+              </tr>
+              <tr>
+                <td>03</td>
+                 <td class="td-dot-position"><span class="red-dot"></span>Fall</td>
+                <td>10:00pm | 27 Jul</td>
+                <td>D104</td>
+                <td>#C-1233</td>
+                <td>Room is located in the D wing.</td>
+                <td>Close</td>
+                <td class="css-tooltips"><a role="button" class="notes-icon tooltip">
+                  <span class="tooltiptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</span></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ 

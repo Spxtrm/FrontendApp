@@ -1,0 +1,140 @@
+
+html{
+	position: relative;
+	min-height: 100%;
+}
+body {
+	background: $white;
+	font-family: $base-font;
+	margin: 0px;	
+	min-height:100vh;
+	height:100%;
+	font-family: $base-font;
+	overflow-x:hidden;
+	-webkit-font-smoothing: antialiased;
+ 	-moz-osx-font-smoothing: grayscale; 	
+  	-ms-overflow-style: scrollbar;
+
+	/* min-width: 767px; */
+	@include transition(all 0.5s ease 0s);
+	
+}
+section {
+	overflow-x:hidden;
+}
+.btn.active:focus, .btn.focus:active, .btn:active:focus, .btn:focus {
+  	outline: 0px;
+  	outline-offset: -2px;
+  	-webkit-appearance: none;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+    /* -webkit-text-fill-color: #ffffff !important; */
+}
+:focus {
+	outline: none !important;
+}
+a, button {
+	// border: 0px;
+	@include box-shadow(none);
+	outline: none;
+  	-webkit-appearance: none;
+  	text-decoration: none;
+  	font-size: 14px;
+	&:hover, &:active, &:focus {
+		outline: none;
+		text-decoration: none;
+	}
+}
+input, textarea {
+	@include box-shadow(none);
+    outline: none !important;
+  	-webkit-appearance: none;
+}
+img {
+	max-width:100%;
+}
+ul, li{
+	list-style:none;
+	margin:0px;
+	padding:0px;	
+}
+h1, h2, h3, h4, h5, h6, p{
+	padding: 0px;
+	margin:0px;
+}
+p {
+	font-size: 14px;
+	color:$text-color;
+}
+h1{
+	font-size: 27px;
+	font-weight: 700;
+	font-family: inherit;
+	color: $black-color;
+	@include breakpoint(xlarge) {
+		font-size: 24px;
+	}
+	@include breakpoint(small) {
+		font-size: 20px;
+	}
+}
+h2 {
+	color: $black-color;
+	font-size: 26px;
+	font-weight: 700;
+	font-family: inherit;
+	@include breakpoint(xlarge) {
+		font-size: 24px;
+	}
+	@include breakpoint(small) {
+		font-size: 20px;
+	}
+	@include breakpoint(x-small) {
+		font-size: 17px;
+	}
+}
+h3 {
+	color: $black-color;
+	font-size: 18px;
+	font-weight: 600;
+	font-family: inherit;
+	@include breakpoint(xlarge) {
+		font-size: 16px;
+	}
+	@include breakpoint(small) {
+		font-size: 15px;
+	}
+}
+.noPadd {
+	padding: 0 !important;
+}
+.noMarg {
+	margin: 0 !important;
+}
+hr {
+    background: $lines-color;
+    border: medium none;
+    display: block;
+    float: left;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.modal-backdrop.in {
+    opacity: 0.65;    
+}
+.modal-backdrop {
+    background-color: #3a3a3a;
+    z-index: 1090;
+}
+.modal {
+	z-index: 1091;	
+	.modal-content {
+		@include border-radius(20px);
+	}
+}
+.mCSB_inside > .mCSB_container{
+	margin-right: 0px !important;
+}

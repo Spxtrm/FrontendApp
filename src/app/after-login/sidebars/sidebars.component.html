@@ -1,0 +1,119 @@
+<div class="main-body main-bodys" id="main-body">
+    <div class="right-section" style="position: fixed;right: 0;"> 
+      <div class="btn-close-sidebar">
+          <button class="btn" type="button" id="close-BTN" (click)="closeSideBar()" ><i class="material-icons">close</i></button>
+      </div>
+      <div class="table-section-header">
+          <mat-tab-group>
+              <mat-tab>
+                <ng-template mat-tab-label>
+                    <a class="alert-tab" ><span class="ball"></span></a>
+                </ng-template>
+                <div id="test-swipe-3" class="col s12 tabs-bodys" >
+                    <div class="bell-tab-section">
+                      <h3>Notifications</h3>
+                      <perfect-scrollbar style="max-width: 600px; max-height: 400px;" [config]="config">
+                       <div class="contant mCustomScrollbar" data-mcs-theme="dark" style="max-height: 73vh;min-height: 100%;">
+                        <ul style="cursor:pointer">
+                          <li [ngClass]="notificationList.isActive ? 'new-notify active':'new-notify'" *ngFor="let notificationList of notification; let i=index;">
+                            <a (click)="goToAlertDetail('bell',i)" class="clik-box">
+                              <h4   class="file-name">{{notificationList.title}}</h4>
+                              <p>{{notificationList.date}}  |  {{notificationList.time}}</p>
+                            </a>
+                          </li>                                             
+                        </ul>
+                      </div>
+            </perfect-scrollbar>
+                    </div>
+                 </div>        
+                </mat-tab>
+            
+              <mat-tab>
+                <ng-template mat-tab-label>
+                    <a class="alert-tab" ><span class="camera"></span></a>
+                </ng-template>
+                <div id="test-swipe-4" class="col s12 tabs-bodys">
+                    <div class="camera-tab-section">
+                      <div class="tab-heading">
+                        <h4>Cameras <span>(143)</span></h4>
+
+                        <div class="input-field col s4 selct-sort-list">
+                         <mat-form-field class='dropdown-trigger white-btn-border' >
+                          <mat-select  placeholder="Sort by" >
+                            <mat-option  *ngFor="let action of action" >
+                              {{action.viewValue}}
+                            </mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                      </div>
+
+                      </div>
+                      <div class="tab-body">
+                          <div class="input-field col s6 input-upper">
+                            <i class="material-icons prefix">search</i>
+                            <input type="text" class="input-style" placeholder="Search">
+                          </div> 
+                          <perfect-scrollbar style="max-width: 600px; max-height: 400px;" [config]="config">
+
+                          <div class="mCustomScrollbar" data-mcs-theme="dark" style="max-height: 69vh;height: 100%;">
+                          <ul class="video-file" style="cursor:pointer">
+                            <li [ngClass]="cameraList.isActive ? 'new-notifcation active':'new-notifcation'" *ngFor="let cameraList of camera; let i =index;">
+                                <a (click)="goToAlertDetail('camera',i)" class="clik-box">
+                                  <h4   class="file-name"><span class="file-icon"></span>{{cameraList.camera}}</h4>
+                                  <p>{{cameraList.room}}<span>{{cameraList.floor}}</span></p>
+                                </a>
+                            </li>
+                            
+                          </ul>
+                        </div>
+                        </perfect-scrollbar>
+                      </div>
+                    </div>
+                </div>      
+              </mat-tab>
+            
+              <mat-tab>
+                <ng-template mat-tab-label>
+                    <a class="alert-tab" ><span class="folder"></span></a>
+                </ng-template>
+            
+                <div id="test-swipe-5" class="col s12 tabs-bodys">
+                    <div class="camera-tab-section">
+                        <div class="tab-heading">
+                          <h4>Rooms <span>(203)</span></h4>
+                          <div class="input-field col s4 selct-sort-list">
+                          <mat-form-field class='dropdown-trigger white-btn-border' >
+                            <mat-select  placeholder="Sort by" >
+                              <mat-option  *ngFor="let action of action" >
+                                {{action.viewValue}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                          </div>
+                        </div>
+                        <div class="tab-body">
+                        
+                            <div class="input-field col s6 input-upper">
+                              <i class="material-icons prefix">search</i>
+                              <input type="text" class="input-style" placeholder="Search">
+                            </div> 
+                            <perfect-scrollbar style="max-width: 600px; max-height: 400px;" [config]="config">
+                          <div class="mCustomScrollbar" data-mcs-theme="dark" style="max-height: 69vh;height: 100%;">
+                              <ul class="video-file" style="cursor:pointer">
+                                  <li [ngClass]="roomList.isActive ?'active':''" *ngFor="let roomList of room; let i =index;">
+                                    <a  (click)="goToAlertDetail('room',i)" class="clik-box">
+                                      <h4 class="file-name"><span class="folder-icon"></span>{{roomList.camera}}</h4>
+                                      <p>{{roomList.room}}<span>{{roomList.floor}}</span></p>
+                                    </a>
+                                  </li>
+                                </ul>
+                          </div>
+                          </perfect-scrollbar>
+                        </div>
+                      </div>
+                      </div>      
+                      </mat-tab>
+            </mat-tab-group>
+      </div>
+    </div>
+    </div>

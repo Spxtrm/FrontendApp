@@ -1,0 +1,219 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+@import '~sass/base';
+
+.logo{
+
+    background-image: url("../../../assets/images/logo.png");
+    @include image-2x('../../../assets/images/logo@2x.png', auto, 100%);
+    width: 280px;
+    height: 47px;
+    background-repeat: no-repeat;
+    float: left;
+    background-size: contain;
+    background-position: 0 0;
+    &.logo-two{
+        background-image: url("../../../assets/images/logo-two.png");
+        // @include image-2x('../../../assets/images/logo@2x.png', auto, 100%);
+        width: 102px;
+        height: 48px;
+    }
+    @include breakpoint(x-small) {
+        width: 184px;
+        height: 45px;
+    }
+}
+.search-icon{
+    background-image: url("../../../assets/images/seach_icon.png");
+    @include image-2x('../../../assets/images/seach_icon@2x.png', 100%, auto);
+    width: 23px;
+    height: 23px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    float: left;
+    &.search-positon{
+        position: absolute;
+        top: 12px;
+    }
+}
+.body-padd{
+    padding-top: 68px !important;
+    @include breakpoint(xlarge) {
+        padding-top: 0px !important;
+    }
+}
+.header{
+    position: fixed;
+    z-index: 400;
+    top: 0;
+    width: 100%;
+    // @include breakpoint(xlarge) {
+    //     position: relative;
+    // }
+    .search-section{
+        display: block;
+        float: left;
+        width: 100%;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+        box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+        .input-field{
+            overflow: hidden;
+            padding: 0 20px;
+            margin: 11px 0;
+            @include breakpoint(x-small) {
+                margin: 12px 0;
+            }
+            &:hover, &:active, &:focus{
+                .search-icon{
+                    background-position: center bottom !important;
+                }
+            }
+            input{
+                border: none;
+                padding: 0 40px;
+                margin: 0;
+                box-sizing: border-box;
+                &:hover, &:active, &:focus{
+                    border: none;
+                    box-shadow: none;
+                }
+            }
+            button{
+                position: absolute;
+                top: 6px;
+                right: 16px;
+                background: none;
+                border: none;
+                box-shadow: none;
+                color: #534b67;
+                padding: 0;
+                i{
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+    .headr-positions{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        float: left;
+        width: 100%;
+        padding-bottom: 10px;
+        margin: 0;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+        box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+        border-bottom: 1px solid #e3e3e3;
+        @include breakpoint(small) {
+            
+        }
+    }
+    .logo-div{
+        padding: 10px 0 0px 15px;
+    }
+    .profile-section{
+        display: flex !important;
+        align-items: center;
+        justify-content: flex-end;
+        float: left;
+        width: 100%;
+        padding-top: 10px;
+        @include breakpoint(small) {
+            justify-content: flex-end;
+            margin-top: 7px;
+        }
+        .serch-btn{
+            float: left;
+            display: flex;
+            button{
+                background-color: transparent;
+                border: none;
+                padding: 0px;
+            }
+            &:hover{
+                button{
+                    cursor: pointer;
+                    .search-icon{
+                        background-position: center bottom;
+                    }
+                }
+            }
+        }
+        .profile-dropdown{
+            position: relative;
+            .drop-down-position{
+                width: 174.9px !important;
+                left: auto !important;
+                right: 16px !important;
+                top: 60px !important;
+                overflow: visible;
+                &:before{
+                    content: '';
+                    width: 0; 
+                    height: 0; 
+                    border-left: 10px solid transparent;
+                    border-right: 11px solid transparent;
+                    border-bottom: 10px solid #000;
+                    top: -11px;
+                    right: 13px;
+                    position: absolute;
+                    opacity: 0.1;
+                }
+                &:after{
+                    content: '';
+                    width: 0; 
+                    height: 0; 
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-bottom: 10px solid #fff;
+                    top: -10px;
+                    right: 13px;
+                    position: absolute;
+                }
+            }
+            a{
+                color: #000;
+                background-color: transparent;
+                border: none;
+                box-shadow: none;
+                display: flex;
+                align-items: center;
+                .user-name{
+                    @include breakpoint(small) {
+                        display: none;
+                        opacity: 0;
+                    }
+                }
+                &:hover, &:active{
+                    color: #7475e5;
+                    i{
+                        color: #7475e5;
+                    }
+                }
+                .user-dp{
+                    background-image: url("../../../assets/images/user-dp.png");
+                    width: 47px;
+                    height: 47px;
+                    background-repeat: no-repeat;
+                    background-position: center top;
+                    margin-left: 15px;
+                    background-size: cover;
+                    @include breakpoint(small) {
+                        margin-left: 0px;
+                    }
+                }
+                i{
+                    margin-left: 15px;
+                    @include breakpoint(small) {
+                        display: none;
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+}

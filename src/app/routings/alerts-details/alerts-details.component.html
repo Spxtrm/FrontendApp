@@ -1,0 +1,46 @@
+<div class="main-body" id="main-body">
+  <div class="left-section alrt-details-section">
+    <div class="table-section-header">
+      <app-pagebar></app-pagebar>
+      <div id="test-swipe-2" class="col s12 alert-tab-section">
+          <div class="alrt-tab-head position-mobile">
+              <h4>ALERTS</h4>
+              <button type="button" class="waves-effect btn-flat back-btn ">Back</button>
+            </div>
+        <div class="alrts-details-section">
+          <div class="img-section">
+            <img src="./assets/images/room-image.png" alt="">
+          </div>
+          <div class="details-section">
+            <h4 class="heading"><span class="red-dot"></span>Fall</h4>
+            <ul>
+              <li><h4>ID:<span class="words-space">0000238184</span></h4></li>
+              <li><h4>Room:<span class="words-space">C002</span></h4></li>
+              <li><h4>Date:<span class="words-space">Jan 18, 2018</span></h4></li>
+              <li><h4>Camera:<span class="words-space">0007803826 (NE)</span></h4></li>
+              <li><h4>Time:<span class="words-space">11:18 AM</span></h4></li>
+              <li><h4>Floor:<span class="words-space">Main Floor</span></h4></li>
+            </ul>
+            <h4>Organization:<span class="words-space2">Wes Park Health Care</span></h4>
+            <h4>Room Description:<span class="words-space2">The room is located on west side by stairway.</span></h4>
+            <div class="buton-section" id="btnSection" *ngIf="!hideAction">
+              <h4>Take Action</h4>
+              <div class="details-btns">
+                <button type="button"  (click)="showClose()" class="purple_btn closebtn modal-trigger" href="#">Close</button>
+                <button type="button" class="purple_btn modal-trigger" (click)="openDialog()">F-Positive</button>
+              </div>
+            </div>
+            <div class="close-section" style="display: none" id="closeSection">
+              <h4>CLOSE</h4>
+              <div class="icon-text">
+                <span class="note-blnk-icon"></span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</div> 

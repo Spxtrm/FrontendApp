@@ -1,0 +1,14 @@
+<div class="table-section-header">
+    <ul id="tabs-swipe-demo" class="tabs">
+        <li class="tab" style="cursor:pointer"><a [ngClass]="dashboard ?'alert-tab active':'alert-tab'"  (click)="goToDashboard()">Dashboard</a></li>
+        <li class="tab" style="cursor:pointer"><a [ngClass]="alert ?'alert-tab active':'alert-tab'" (click)="goToAlert()">Alerts</a></li>
+        <li class="side-navbtn">
+          <div class="logo-icon">
+            <span class="logo-fav"></span>
+          </div>
+          <div class="notifcation-hidde open-notify">
+            <button class="purple_btn" id="side_nav" (click)="openSideBar()"><i class="material-icons">toc</i></button>
+          </div>
+        </li>
+      </ul>
+ </div>

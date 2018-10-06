@@ -1,0 +1,395 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+@import '~sass/base';
+
+
+
+.camera-main-body{
+    @include breakpoint (medium) {
+        width: 100%;
+    }
+}
+.camera-section{
+    float: left;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px; 
+    margin-bottom: 20px;
+    @include breakpoint (x-small){
+        padding: 0px;
+    }
+    h4{
+        font-size: 20px;
+        color: #534b67;
+        border-bottom: 2px solid $border-color;
+        padding-bottom: 25px;
+        &.brdr-none{
+            border: none;
+        }
+        span{
+            color: #6c757d;
+        }
+    }
+    .camera-details{
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        margin-top: 25px;
+        @include breakpoint (large){
+            flex-wrap: wrap;
+        }
+        table{
+            thead{
+                tr{
+                    border-bottom: 2px solid $border-color;
+                    th{
+                        color: $text-color;
+                    }
+                }
+            }
+            tbody{
+                tr{
+                  td{
+                    &.td-dot-position{
+                      span{
+                        margin-top: 4px;
+                      }
+                    }
+                  }
+                }
+            }
+        }
+        .details{
+            max-width: 300px;
+            padding: 20px;
+            width: 100%;
+            &.back-color{
+                background-color: #f6f7fb;
+            }
+            &:hover{
+                background-color: #f6f7fb;
+            }
+            @include breakpoint (large){
+                width: auto;
+            }
+            @media (max-width: 513px){
+                width: 100%;
+            }
+            h4{
+                border: none;
+            }
+            .top-mrg{
+                margin-top: 45px;
+                @media (max-width: 513px){
+                    margin-top: 0px;
+                }
+            }
+            table{
+                tr{
+                    border: none;
+                    th{
+                        color: $text-color;
+                        font-weight: 400;
+                    }
+                    td{
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Baseline styles
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
+    background-color: $table-bg;
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+          @include transition(all .3s ease) ;
+        > th,
+        > td {
+          text-align: left;
+          padding:10px 10px;
+          vertical-align: top;
+          border-top: 0;
+          @include transition(all .3s ease) ;
+        }
+      }
+    }
+    > thead > tr > th {
+      font-weight: $table-header-font-weight;
+      color: $table-header-font-color;
+      vertical-align: bottom;
+      border-bottom: 1px solid rgba(0,0,0,.12);
+    }
+    > caption + thead,
+    > colgroup + thead,
+    > thead:first-child {
+      > tr:first-child {
+        > th,
+        > td {
+          border-top: 0;
+        }
+      }
+    }
+    > tbody + tbody {
+      border-top: 1px solid rgba(0,0,0,.12);
+    }
+  
+    // Nesting
+    .table {
+      background-color: $table-bg;
+    }
+  
+    // Remove border
+    .no-border {
+      border: 0;
+    }
+  }
+  
+  // Condensed table w/ half padding
+  .table-condensed {
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        > th,
+        > td {
+          padding: $table-condensed-cell-padding;
+        }
+      }
+    }
+  }
+  // Bordered version
+  //
+  // Add horizontal borders between columns.
+  .table-bordered {
+    border: 0;
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        > th,
+        > td {
+          border: 0;
+          border-bottom: 1px solid $table-border-color;
+        }
+      }
+    }
+    > thead > tr {
+      > th,
+      > td {
+        border-bottom-width: 2px;
+      }
+    }
+  }
+  
+  
+  // Zebra-striping
+  //
+  // Default zebra-stripe styles (alternating gray and transparent backgrounds)
+  .table-striped {
+    > tbody > tr:nth-child(odd) {
+      > td,
+      > th {
+        background-color: $table-bg-accent;
+      }
+    }
+  }
+  
+  // Hover effect
+  //
+  .table-hover {
+    > tbody > tr:hover {
+      > td,
+      > th {
+        background-color: $table-bg-hover;
+      }
+    }
+  }
+  
+  // Responsive tables (vertical)
+  //
+  // Wrap your tables in `.table-responsive-vertical` and we'll make them mobile friendly
+  // by vertical table-cell display. Only applies <768px. Everything above that will display normally.
+  // For correct display you must add 'data-title' to each 'td'
+  .table-responsive-vertical {
+  
+    @media screen and (max-width: 768px) {
+  
+      // Tighten up spacing
+      > .table {
+        margin-bottom: 0;
+        background-color: transparent;
+        > thead,
+        > tfoot {
+          display: none;
+        }
+  
+        > tbody {
+          display: block;
+          overflow: visible;
+  
+          > tr {
+            display: block;
+          //   border: 1px solid $table-border-color;
+            border-radius: 2px;
+            margin-bottom: 3px;
+  
+            > td {
+              background-color: transparent;
+              display: block;
+              vertical-align: middle;
+              text-align: left;
+              white-space: normal;
+              position: relative;
+              padding-left: 142px;
+            }
+            > td[data-title]:before {
+              content: attr(data-title);
+              float: left;
+              font-size: inherit;
+              font-weight: $table-header-font-weight;
+              color: $table-header-font-color;
+              padding-right: 20px;
+              position: absolute;
+              left: 0;
+            }
+          }
+        }
+      }
+      
+      // Special overrides for shadows
+      &.shadow-z-1 {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        > .table > tbody > tr {
+          border: none;
+        }
+      }
+  
+      // Special overrides for the bordered tables
+      > .table-bordered {
+        border: 0;
+  
+        // Nuke the appropriate borders so that the parent can handle them
+        > tbody {
+          > tr {
+            > td {
+              border: 0;
+              border-bottom: 1px solid $table-border-color;
+            }
+            > td:last-child {
+              border-bottom: 0;
+            }
+          }
+        }
+      }
+  
+      // Special overrides for the striped tables
+      > .table-striped {
+        > tbody > tr > td,
+        > tbody > tr:nth-child(odd) {
+            background-color: $table-bg;
+        }
+        > tbody > tr > td:nth-child(odd) {
+            background-color: $table-bg-accent;
+        }
+      }
+  
+      // Special overrides for hover tables
+      > .table-hover {
+        > tbody {
+          > tr:hover > td,
+          > tr:hover {
+            background-color: transparent;
+          }
+          > tr > td:hover {
+            background-color: $table-bg-hover;
+          }
+        }
+      }
+    }
+  }
+  
+  // tooltip css
+  .css-tooltips{
+      .tooltip {
+          position: relative;
+          display: inline-block;
+          border-bottom: 1px dotted #fff;
+          &:hover{
+              .tooltiptext{
+                  visibility: visible;
+                  opacity: 1;
+              }
+          }
+          .tooltiptext {
+              visibility: hidden;
+              width: 325px;
+              background-color: #fff;
+              color: #000;
+              text-align: center;
+              padding: 5px 5px;
+              border-radius: 0px;
+              position: absolute;
+              z-index: 1;
+              bottom: 125%;
+              right: -26px;
+              margin-left: 0px;
+              white-space: normal;
+              opacity: 0;
+              transition: opacity 0.4s;
+              -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.4);
+              -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.4);
+              box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.4);
+              @include breakpoint(medium){
+                  width: 200px;
+                  right: -160px;
+              }
+              &::after {
+                  content: "";
+                  position: absolute;
+                  top: 100%;
+                  right: 27px;
+                  margin-left: -5px;
+                  border-width: 10px;
+                  border-style: solid;
+                  border-color: #fff transparent transparent transparent;
+                  @include breakpoint(medium){
+                      right: 162px;
+                  }
+              }
+              &::before {
+                  content: "";
+                  position: absolute;
+                  top: 100%;
+                  right: 25px;
+                  margin-left: -5px;
+                  border-width: 12px;
+                  border-style: solid;
+                  border-color: #000 transparent transparent transparent;
+                  opacity: 0.1;
+                  @include breakpoint(medium){
+                      right: 160px;
+                  }
+              }
+  
+          }
+      }
+  }
+.camra-section{
+  padding-bottom: 60px;
+  @include breakpoint (small){
+    padding-bottom: 80px;
+  }
+  @media (max-width: 510px){
+    padding-bottom: 130px;
+  }
+}

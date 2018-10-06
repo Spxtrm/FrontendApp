@@ -1,0 +1,94 @@
+<div class="main-body profile_body wow slideInDown" id="main-body">
+  <div class="left-section profile-left-section">
+    <div class="table-section-header">
+      <app-pagebar></app-pagebar>
+    </div>
+    <div class="profile-section alert-tab-section">
+      <div class="alrt-tab-head position-mobile">
+        <h4>PROFILE</h4>
+        <button type="button" class="waves-effect btn-flat back-btn ">Back</button>
+      </div>
+      <div class="profile-detail">
+        <div class="user-dp-section">
+          <div class="user-dp-name">
+            <span class="user-image" style="background-image: url('./assets/images/user-dp.png')">
+            <input type="file" class="">
+            </span>
+            <h4>Mehul Katpara</h4>
+          </div>
+          <div class="user-mail-contact">
+            <div class="mail_phone">
+              <p>Email</p>
+              <a href="#">Mehul.21@gmail.com</a>
+            </div>
+            <div class="mail_phone">
+              <p>Phone</p>
+              <h4>+01 293 293 0283</h4>
+            </div>
+          </div>
+        </div>
+        <div class="user-detail-section">
+            <mat-tab-group>
+              <mat-tab label="Settings"> 
+                  <div id="test1" class="col s12 profile-seting">
+                      <div class="seting-form">
+                        <form>
+                          <div class="inputs-info">
+                              <h4>PERSONAL INFORMAITON</h4>
+                            <div class="input-field inputs-profile">
+                              <label for="first_name">First Name</label>
+                              <input placeholder="Username" id="first_name" type="text" class="validate">
+                            </div>
+                            <div class="input-field inputs-profile">
+                              <label for="last_name">Last Name</label>
+                              <input placeholder="Username" id="last_name" type="text" class="validate">
+                            </div>
+                          </div>
+                            <div class="inputs-info pass-section">
+                                <h4>CHANGE PASSWORD</h4>
+                                <div class="confirm-pass-input">
+                                  <div class="input-field inputs-profile">
+                                    <label for="password">Current Password</label>
+                                    <input placeholder="Username" id="password" type="password" class="validate">
+                                  </div>
+                                </div>
+                              <div class="input-field inputs-profile">
+                                <label for="new_password">New Password</label>
+                                <input placeholder="Username" id="new_password" type="password" class="validate">
+                              </div>
+                              <div class="input-field inputs-profile">
+                                <label for="confirm_password">Confirm New Password</label>
+                                <input placeholder="Username" id="confirm_password" type="password" class="validate">
+                              </div>
+                            </div>
+                            <div class="form-update">
+                              <button class="purple_btn update-btn waves-effect" type="submit">Update</button>
+                            </div>
+                        </form>
+                      </div>
+                    </div>
+              
+              </mat-tab>
+              <mat-tab label="Contact Admin"> 
+                  <div id="test1" class="col s12 profile-seting">
+                      <div class="seting-form">
+                          <form>
+                              <div class="inputs-info pass-section">
+                                  <h4>Your Message</h4>
+                                    <div class="input-field textarea-profile inputs-profile">
+                                      <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                    </div>
+                              </div>
+                              <div class="form-update">
+                                <button class="purple_btn update-btn waves-effect" type="submit">Update</button>
+                              </div>
+                          </form>
+                        </div>
+                  </div>
+              </mat-tab>
+            </mat-tab-group>
+           
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,32 @@
+<header class="header">
+  <div class="search-section" id="seach-Section" style="display:none" >
+    <div class="input-field col s12 ">
+      <i class="search-icon search-positon"></i>
+      <input type="text" placeholder="Search & enter" id="icon_prefix" type="text" class="validate">
+      <button class="btn" type="button" id="close-BTN" (click)="close_search()" ><i class="material-icons" >close</i></button>
+    </div>
+  </div>
+  <div class="row headr-positions" id="HeaderPos" *ngIf="!isSearch">
+      <a href="login.html" class="logo-div">
+        <span class="logo logo-two"></span>
+      </a>
+    <div class="profile-section">
+      <div class="serch-btn">
+        <button (click)="show_search()">
+          <i class="search-icon"></i>
+        </button>
+      </div>
+      <div class="profile-dropdown" (clickOutside)="onClickedOutside($event)">
+        
+       <a class='dropdown-trigger btn' (click)="openProfileOption()" data-target='dropdown20'><span class="user-name">Mehul Katpara</span>
+          <i class="material-icons">arrow_drop_down</i><span class="user-dp right"></span></a>
+        <!-- Dropdown Structure -->
+       <ul id='dropdown20' class='dropdown-content drop-down-position' *ngIf="isProfile" style="display: block; width: 174.891px; left: -51.0156px; top: -60px; height: 100px; transform-origin: 0px 0px 0px; opacity: 1; transform: scaleX(1) scaleY(1);">
+          <li><a (click)="ViewProfile()"><i class="material-icons">person_outline</i>Profile</a></li>
+          <li><a (click)="logout()"><i class="material-icons">power_settings_new</i>Log Out</a></li>
+        </ul>
+       
+      </div>
+    </div>
+  </div> 
+</header>  

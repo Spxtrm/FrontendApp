@@ -1,0 +1,39 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+@import '~sass/base';
+
+.table-section-header{
+    -webkit-box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.2);
+box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #e3e3e3;
+    ul{
+        &.tabs{
+            display: flex;
+            align-items: center;
+        }
+        li{
+            text-transform: capitalize;
+            @include breakpoint(medium) {
+                width: 100%;
+            }
+            &.side-navbtn{
+                width: 100%;
+                position: relative;
+                float: left;
+                height: 100%;
+            }
+            .alert-tab{
+                color: #b2b2b2;
+                &.active{
+                    background: linear-gradient(to right, rgba(240,47,23,1) 0%, rgba(147,148,237,1) 0%, rgba(108,110,227,1) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f02f17', endColorstr='#6c6ee3', GradientType=1 );
+                    color: #fff;
+                }
+            }
+            &.indicator{
+                display: none;
+            }
+        }
+    }
+}

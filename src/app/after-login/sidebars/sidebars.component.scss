@@ -1,0 +1,361 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+@import '~sass/base';
+
+
+.main-bodys{
+    z-index: 99 !important;
+}
+.right-section{
+    top: 70px;
+    width: 328px;
+    float: right;
+    background-color: #fff;
+    @include transition(all 0.5s ease 0s) ;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+    z-index: 9;
+    @include breakpoint(xlarge) {
+    width: 0px !important;
+    }
+    .btn-close-sidebar{
+        position: absolute;
+        top: 56px;
+        right: -3px;
+        z-index: 9;
+        display: none;
+        button{
+            background: none;
+            border: none;
+            box-shadow: none;
+            color: $text-color;
+            i{
+                font-size: 27px;
+            }
+        }
+    }
+    .table-section-header{
+        .mat-tab-header{
+            background-color: #534b67;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+            .mat-tab-header-pagination{
+                display: none;
+            }
+          
+
+            .mat-tab-label{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-width: 109px;
+                min-width: 109px;
+                opacity: 1;
+                @include breakpoint (small){
+                    max-width: 94px;
+                    min-width: 94px;
+                }
+                &.mat-tab-label-active {
+                    .alert-tab{
+                        span{
+                            &.ball{
+                                background-position: 0 -32px;
+                            }
+                            &.camera{
+                                background-position: 0 -25px;
+                            }
+                            &.folder{
+                                background-position: 0 -42px;
+                            }
+                        }
+                    }
+                }
+                .alert-tab{
+                    height: auto;
+                    width: 108px;
+                    padding: 0px;
+                    display: flex;
+                    justify-content: center;
+                    @include breakpoint(small) {
+                        width: 90px;
+                    }
+                    span{
+                        width: 27px;
+                        background-repeat: no-repeat;
+                        background-position: 0 0;
+                        background-size: cover;
+                        float: left;
+                        &.ball{
+                            background-image: url("../../../assets/images/bell_icon.png");
+                            @include image-2x('../../../assets/images/bell_icon@2x.png', 100%, auto);
+                             height: 27px;
+                        }
+                        &.camera{
+                            background-image: url("../../../assets/images/vdo_cam_icon.png");
+                            @include image-2x('../../../assets/images/vdo_cam_icon@2x.png', 100%, auto);
+                             height: 27px;
+                        }
+                        &.folder{
+                            background-image: url("../../../assets/images/folder_icon.png");
+                            @include image-2x('../../../assets/images/folder_icon@2x.png', 100%, auto);
+                             height: 35px;
+                        }
+                    }
+                }
+                &.indicator{
+                    height: 3px;
+                    background: linear-gradient(to right, rgba(240,47,23,1) 0%, rgba(147,148,237,1) 0%, rgba(108,110,227,1) 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f02f17', endColorstr='#6c6ee3', GradientType=1 );
+                }
+            }
+        }
+        .tabs-bodys{
+            -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+            -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+            box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.1);
+            .bell-tab-section{
+                float: left;
+                width: 100%;
+                h3{
+                    margin-top: 21px;
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: $text-color;
+                    padding-bottom: 15px;
+                    padding-left: 17px;
+                    border-bottom: 1px solid #dbe3e9;
+                    @include breakpoint(small) {
+                        font-size: 15px;
+                    }
+                }
+                ul{
+                    li{
+                        &.active{
+                            .clik-box{
+                                background-color: #544b68;
+                                h4{
+                                    color: #fff;
+                                }
+                                p{
+                                    color: #fff;
+                                }
+                            }
+                        }
+                        .clik-box{
+                            padding: 0 20px;
+                            width: 100%;
+                            float: left;
+                            border-bottom: 1px solid #dbe3e9;
+                        }
+                        &.new-notify{
+                            color: $text-color !important;
+                            font-weight: 600;
+                            h4{
+                                margin-top: 16px;
+                                font-size: 14px;
+                                font-weight: 600;
+                                color: $text-color;
+                                @include breakpoint(small) {
+                                    font-size: 12px;
+                                }
+                            }
+                            p{
+                                color: #a1aab2;
+                                float: left;
+                            }
+                        }
+                        h4{
+                            margin-top: 21px;
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: #61666b;
+                            text-align: left;
+                            float: left;
+                            @include breakpoint(small) {
+                                font-size: 12px;
+                            }
+                        }
+                        p{
+                            color: #a1aab2;
+                            margin-bottom: 12px;
+                            float: left;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .camera-tab-section{
+                float: left;
+                width: 100%;
+                .tab-heading{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 17px;
+                    align-items: center;
+                    .selct-sort-list{
+                        margin: 10px 0;
+                        position: relative;
+                        margin-right: 0px;
+                        @include breakpoint(xlarge) {
+                            margin-right: 30px;
+                        }
+                        a{
+                            color: #7475e5 !important;
+                            @include breakpoint(small) {
+                                padding: 4px;
+                            }
+                            i{
+                                @include breakpoint(small) {
+                                    margin-left: 0px;
+                                } 
+                            }
+                        }
+                        .dropdown-content{
+                            min-width: 106px !important;
+                            @include breakpoint(xlarge) {
+                                left: -5px !important;
+                            }
+                            @include breakpoint(small) {
+                                left: -27px !important;
+                            }
+                            li{
+                                display: flex;
+                                align-items: center;
+                                padding: 0 6px;
+                                a{
+                                    color: $text-color !important;
+                                    padding: 14px 10px;
+                                }
+                            }
+                        }
+                    }
+                    h4{
+                        font-size: 17px;
+                        @include breakpoint(small) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .tab-body{
+                    .input-upper{
+                        margin: 0px;
+                        border-bottom: 1px solid #dbe3e9;
+                        border-top: 1px solid #dbe3e9;
+                        background-color: #f6f7fb;
+                        padding-left: 13px;
+                        &:hover, &:focus{
+                            i{
+                                color: #7475e5;
+                            }
+                        }
+                        .input-style{
+                            margin-bottom: 0px;
+                            margin-left: 30px;
+                            width: calc(100% - 30px);
+                            border-bottom: none;
+                            box-shadow: none;
+                            // .md-placeholder {
+                            //     color: #a1aab2;
+                            // }
+                            &:focus{
+                                border-bottom: none;
+                                box-shadow: none;
+                            }
+                        }
+                        i{
+                            color: #a1aab2; 
+                        }
+                    }
+                    .video-file{
+                        li{
+                            &.active{
+                                a{
+                                    background-color: #544b68;
+                                }
+                                .file-name{
+                                    color: #fff;
+                                }
+                                p{
+                                    color: #fff;
+                                }
+                            }
+                            .file-name{                                                
+                                font-size: 18px;
+                                margin-top: 21px;
+                                color: $text-color;
+                                @include breakpoint(small) {
+                                    font-size: 15px;
+                                }
+                                .file-icon{
+                                    background-image: url("../../../assets/images/video_file_icon.png");
+                                    @include image-2x('../../../assets/images/video_file_icon@2x.png', 100%, auto);
+                                    width: 28px;
+                                    height: 23px;
+                                    background-repeat: no-repeat;
+                                    background-position: center top;
+                                    float: left;
+                                    margin-right: 11px;
+                                }
+                                .folder-icon{
+                                    background-image: url("../../../assets/images/folder_file_icon.png");
+                                    @include image-2x('../../../assets/images/folder_file_icon@2x.png', 100%, auto);
+                                    width: 16px;
+                                    height: 28px;
+                                    background-repeat: no-repeat;
+                                    background-position: center top;
+                                    float: left;
+                                    margin-right: 11px;
+                                }
+                            }
+                            p{
+                                margin-top: 5px;
+                                color: #a1aab2;
+                                font-size: 14px;
+                                margin-bottom: 12px;
+                                @include breakpoint(small) {
+                                    font-size: 12px;
+                                }
+                                span{
+                                    margin-left: 40px;
+                                }
+                            }
+                            .clik-box{
+                                padding: 0 20px;
+                                width: 100%;
+                                float: left;
+                                border-bottom: 1px solid #dbe3e9;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.mat-form-field{
+    width: 115px;
+    .input-field.col label{
+        left: 0 !important;
+    }
+}
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+    background: linear-gradient(to right, #f02f17 0%, #9394ed 0%, #6c6ee3 100%);
+    height: 3px;
+}
+.mat-tab-group.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus, .mat-tab-group.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus, .mat-tab-nav-bar.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus, .mat-tab-nav-bar.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus{
+    background-color: transparent !important;
+}
+
+.mat-input-wrapper.mat-form-field-wrapper{
+    padding-bottom: 0 !important;
+    .mat-form-field-underline{
+        height: 0px !important;
+        display: none;
+    }
+    .mat-form-field-infix{
+        border: none !important;
+    }
+}

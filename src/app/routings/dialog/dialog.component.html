@@ -1,0 +1,28 @@
+
+<div id="alrtCloseModal" class="modal modal-width" style="z-index: 1003; display: block; opacity: 1; top: 10%; ">
+  <div mat-dialog-content>
+  <div class="modal-content">
+    <h3>Close Alert</h3>
+    <p class="chkbox-position">
+      <label>
+        <input type="checkbox" />
+        <span>Alert Resolved and Closed</span>
+      </label>
+    </p>
+    <p class="chkbox-position">
+      <label>
+        <input type="checkbox" />
+        <span>Some default answers to click.</span>
+      </label>
+    </p>
+    <h5>Or</h5>
+    <div class="input-field col s12">
+      <textarea id="textarea1" class="materialize-textarea" placeholder="Comments"></textarea>
+    </div>
+  </div>
+  </div>
+  <div class="modal-footer">
+    <a  role="submit" class="modal-close waves-effect waves-green btn-flat purple_btn" (click)="onSubmit()">Submit</a>
+    <a  class="modal-close waves-effect waves-green btn-flat purple_btn"  (click)="onNoClick()">Cancel</a>
+  </div>
+</div>

@@ -1,0 +1,117 @@
+<div *ngIf="!isUserSaved ;then firstTemplate else secondTemplate "> </div>
+
+<ng-template #firstTemplate>
+<div class="login_page">
+  <div class="login_block">
+    <div class="white_block z-depth-3">
+      <div class="logo_login">
+        <a class="brand-logo"></a>
+      </div>
+      <div class="login_form">
+        <form>
+          <div class="form-row">
+            <div class="tbl_div login_row">
+              <div class="tbl_cell user_icon valign-wrapper center-align">
+                <i class="material-icons prefix user"></i>
+              </div>
+              <div class="tbl_cell user_inout">
+                <input [(ngModel)]="email" placeholder="Username" type="text" class="validate" [ngModelOptions]="{standalone: true}">
+              </div>
+            </div>
+            <div class="tbl_div login_row">
+              <div class="tbl_cell user_icon valign-wrapper center-align">
+                <i class="material-icons prefix pen"></i>
+              </div>
+              <div class="tbl_cell user_inout">
+                <input placeholder="Password" type="Password" class="validate">
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="tbl_div remember_me">
+              <div class="tbl_cell remember_left">
+                <p>
+                  <label>
+                    <input type="checkbox" class="filled-in" checked="checked" />
+                    <span>Remember me</span>
+                  </label>
+                </p>
+              </div>
+              <div class="tbl_cell remember_right right-align">
+                <a ><i class="material-icons lock"></i> Forgot Password?</a>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <a (click)="login()" class="btn large center-align waves-effect waves-light purple_btn" >Log In</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="center-align terms_block">
+      <ul class="term_links">
+        <li><a href="javascript:void(0)">Terms & Conditions </a></li>
+          <li><a href="javascript:void(0)"> Privacy Policy </a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</ng-template>
+
+<ng-template #secondTemplate>
+    <div class="login_page">
+        <div class="login_block">
+          <div class="white_block z-depth-3">
+            <div class="logo_login login-logo-two">
+              <a href="javascript:void(0)" class="brand-logo"></a>
+            </div>
+            <div class="login_form">
+              <form>
+                <div class="form-row">
+                  <div class="secondary-login">
+                    <h4>Welcome back</h4>
+                    <p>admin@westpark.com</p>
+                  </div>
+                  <div class="tbl_div login_row">
+                    <div class="tbl_cell user_icon valign-wrapper center-align">
+                      <i class="material-icons prefix pen"></i>
+                    </div>
+                    <div class="tbl_cell user_inout">
+                      <input placeholder="Password" type="Password" class="validate">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="tbl_div remember_me">
+                    <div class="tbl_cell remember_left">
+                      <p>
+                        <label>
+                          <input type="checkbox" class="filled-in" checked="checked" />
+                          <span>Remember me</span>
+                        </label>
+                      </p>
+                    </div>
+                    <div class="tbl_cell remember_right right-align">
+                      <a href="javascript:void(0)"><i class="material-icons lock"></i> Forgot Password?</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <a  (click)="login()"  class="btn large center-align waves-effect waves-light purple_btn" >Log In</a>
+                </div>
+              </form>
+            </div>
+            <div class="form-row">
+              <a (click)="otherlogin()" class="pointclick center-align">Sign in with different Account</a>
+            </div>
+          </div>
+          <div class="center-align terms_block">
+            <ul class="term_links">
+              <li><a >Terms & Conditions </a></li>
+                <li><a > Privacy Policy </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+            
+</ng-template>
