@@ -26,7 +26,7 @@ export class SidebarsComponent implements OnInit {
 
  // dummy data for notification
  notification = [
-   {id:1,title:"Floor 2 Under maintenance for Next week", date:"03-08-2018",time:"8:00 PM",isActive:true},
+   {id:1,title:"A positive fall alert in the room: C002", date:"03-08-2018",time:"8:00 PM",isActive:true},
    {id:2,title:"Floor 2 Under maintenance for Next week", date:"03-08-2018",time:"8:00 PM",isActive:false},
    {id:3,title:"Floor 2 Under maintenance for Next week", date:"03-08-2018",time:"8:00 PM",isActive:false},
    {id:4,title:"Floor 2 Under maintenance for Next week", date:"03-08-2018",time:"8:00 PM",isActive:false},
